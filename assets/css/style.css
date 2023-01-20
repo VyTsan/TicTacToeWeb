@@ -1,0 +1,102 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FED049;
+}
+
+#container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 32% 39% 13% 11% 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-responsive {
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+  }
+  #result {
+    font-size: 5vw;
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  #result {
+    font-size: 3.5vh;
+  }
+}
+
+#board {
+  position: relative;
+}
+
+#board, #title, #result, #restart_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#result {
+  padding-top: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #205295;
+  font-family: monospace;
+}
+
+#restart_btn {
+  align-items: baseline;
+}
+
+button {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: 1px solid #205295;
+  color: #FED049;
+  background-color: #205295;
+  transition: all 0.1s ease;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: #205295;
+  border: 3px solid #205295;
+}
+
+button:active {
+  transform: scale(0.9);
+  color: #FED049;
+  background-color: #205295;
+}
+
+.sexy {
+  animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
